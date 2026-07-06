@@ -1,0 +1,19 @@
+{
+  "name": "grid-webgl-openlayers-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:data": "node scripts/prepare-data.mjs",
+    "dev": "npm run prepare:data && vite",
+    "build": "npm run prepare:data && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "grid-webgl-openlayers": "^1.0.1",
+    "ol": "^10.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vite": "^6.2.0"
+  }
+}

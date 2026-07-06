@@ -1,3 +1,7 @@
 node_modules/
 dist-demo/
 public/data/arrayData.json
+demo/node_modules/
+demo/dist/
+demo/public/data/arrayData.json
+demo/public/assets/
