@@ -25,6 +25,7 @@
     "dev": "npm run prepare:demo-data && vite",
     "build": "npm run build:lib",
     "build:lib": "vite build --mode lib",
+    "prepublishOnly": "npm run build:lib",
     "prepare:demo-data": "node scripts/prepare-demo-data.mjs",
     "prebuild:demo": "npm run prepare:demo-data",
     "build:demo": "vite build --mode demo",

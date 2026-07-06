@@ -35,6 +35,13 @@ jobs:
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
 
+      - name: Verify build output
+        run: |
+          test -f dist-demo/index.html
+          test -f dist-demo/data/arrayData.json
+          ! grep -q 'src/main.ts' dist-demo/index.html
+          echo "Demo URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

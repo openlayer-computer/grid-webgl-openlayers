@@ -2,21 +2,18 @@
 
 > OpenLayers + WebGL 网格色斑图与格点数值标注。图层叠加在外部 `ol/Map` 上，不创建 Map、不管理底图。
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?logo=github)](https://github.com/openlayer-computer/grid-webgl-openlayers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![peer ol](https://img.shields.io/badge/peer-ol%20%5E9%20%7C%20%5E10-blue)
 ![vue optional](<https://img.shields.io/badge/vue-%5E3.3%20(optional)-4FC08D>)
 
-## 在线演示
+## 在线文档
 
-推送 `main` 分支后，GitHub Actions 会自动部署 Demo 到 GitHub Pages：
+**[https://openlayer-computer.github.io/grid-webgl-openlayers/](https://openlayer-computer.github.io/grid-webgl-openlayers/)**
 
-**https://\<你的用户名\>.github.io/\<仓库名\>/**
+## 仓库地址
 
-（将 `grid-webgl-openlayers` 换成你的实际仓库名）
-
-[![Live Demo](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://github.com/YOUR_USERNAME/grid-webgl-openlayers/deployments/github-pages)
-
-部署说明见 [docs/github-pages.md](docs/github-pages.md)。
+**[openlayer-computer/grid-webgl-openlayers](https://github.com/openlayer-computer/grid-webgl-openlayers)**
 
 ## 特性
 
@@ -108,17 +105,13 @@ import { GredGridMap, GredLegendPanel } from 'grid-webgl-openlayers/vue';
 | [色带配置](docs/color-ramp.md)                | 不规则色带                        |
 | [示例合集](docs/examples.md)                  | 完整 Demo 代码                    |
 | [平台支持](docs/platform.md)                  | 浏览器 / 移动端 / Flutter         |
-| [构建发布](docs/build.md)                     | npm 打包与类型导出                |
-| [GitHub Pages 部署](docs/github-pages.md)     | 在线 Demo 自动发布                |
 
 ## 本地预览
 
 ```bash
 npm install
-npm run dev          # http://localhost:5173 — 见 src/main.ts
+npm run dev
 ```
-
-Vue 示例：[`examples/vue-demo/App.vue`](examples/vue-demo/App.vue)
 
 ## License
 

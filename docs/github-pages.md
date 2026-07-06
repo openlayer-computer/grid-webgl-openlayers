@@ -66,6 +66,36 @@ GitHub 仓库 → **Actions** → **Deploy GitHub Pages Demo** → **Run workflo
 
 ## 常见问题
 
+### 出现 404 `/src/main.ts`
+
+说明浏览器加载的是**源码版** `index.html`（开发用），不是 Actions 构建的 `dist-demo`。
+
+**原因 A：访问了错误地址**
+
+项目页 Demo 必须带仓库名：
+
+```
+✅ https://openlayer-computer.github.io/grid-webgl-openlayers/
+❌ https://openlayer-computer.github.io/
+❌ https://openlayer-computer.github.io/src/main.ts
+```
+
+**原因 B：Pages 发布源配置错误**
+
+1. 打开 **Settings → Pages**
+2. **Source** 必须选 **GitHub Actions**（不要选 *Deploy from a branch* + `/ (root)`）
+3. 打开 **Actions**，确认 **Deploy GitHub Pages Demo** 最近一次为绿色 ✓
+4. 若之前用过 branch 部署，改回 Actions 后重新 push 或手动 **Run workflow**
+
+**原因 C：Actions 未成功**
+
+构建产物里的 `index.html` 应引用 `/仓库名/assets/index-xxx.js`，而不是 `/src/main.ts`。本地可验证：
+
+```bash
+VITE_BASE_PATH=/grid-webgl-openlayers/ npm run build:demo
+grep main.ts dist-demo/index.html   # 应无输出
+```
+
 ### 页面空白或 404
 
 - 确认 **Settings → Pages** 的 Source 为 **GitHub Actions**（不是旧版 `gh-pages` 分支）

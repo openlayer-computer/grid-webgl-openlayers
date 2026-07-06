@@ -28,11 +28,18 @@ npm run preview:demo   # 本地预览
 
 ## 发布 npm
 
+完整步骤见 **[npm 发布指南](./npm-publish.md)**。
+
 ```bash
+npm login
+npm run build:lib
+npm pack --dry-run    # 预览包内容
 npm publish
 ```
 
-`package.json` 的 `files` 仅包含 `dist`，文档与示例不会打入 npm 包。
+`prepublishOnly` 会在 `npm publish` 前自动执行 `build:lib`。
+
+`package.json` 的 `files` 仅包含 `dist`，文档与 Demo 不会打入 npm 包。
 
 ## package exports
 

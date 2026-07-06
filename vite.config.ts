@@ -13,6 +13,7 @@ function pagesBase(): string {
 export default defineConfig(({ mode }) => {
   if (mode === "lib") {
     return {
+      publicDir: false,
       plugins: [
         vue(),
         dts({
