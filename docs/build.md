@@ -17,6 +17,15 @@ npm run build:lib
 | `dist/grid-webgl-openlayers.css` | 图例样式（`grid-webgl-openlayers/style.css`） |
 | `dist/assets/gridData.worker-*.js` | Worker 分包 |
 
+## 构建 Demo（GitHub Pages）
+
+```bash
+npm run build:demo     # 输出 dist-demo/
+npm run preview:demo   # 本地预览
+```
+
+部署到 GitHub Pages 的完整步骤见 [github-pages.md](./github-pages.md)。
+
 ## 发布 npm
 
 ```bash

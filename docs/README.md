@@ -34,6 +34,8 @@ OpenLayers + WebGL 网格色斑图与格点数值标注库的操作手册。
 | [底层图层 API](./low-level-api.md) | 单独使用 `ChoroplethLayer` / `GridValueLayer` |
 | [平台支持](./platform.md) | 浏览器、移动端、各框架适配说明 |
 | [构建发布](./build.md) | `npm run build:lib`、导出文件、TypeScript 类型 |
+| [GitHub Pages 部署](./github-pages.md) | 在线 Demo 自动发布 |
+| [GitHub Pages 部署](./github-pages.md) | 在线 Demo 自动发布 |
 
 ### 资源
 

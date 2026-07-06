@@ -4,16 +4,19 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![peer ol](https://img.shields.io/badge/peer-ol%20%5E9%20%7C%20%5E10-blue)
-![vue optional](https://img.shields.io/badge/vue-%5E3.3%20(optional)-4FC08D)
+![vue optional](<https://img.shields.io/badge/vue-%5E3.3%20(optional)-4FC08D>)
 
-## 演示
+## 在线演示
 
-> 将功能录屏 GIF 放到 [`docs/assets/demo.gif`](./docs/assets/demo.gif) 后，取消下方注释即可在首页显示动图。  
-> 录制说明见 [docs/assets/README.md](./docs/assets/README.md)。
+推送 `main` 分支后，GitHub Actions 会自动部署 Demo 到 GitHub Pages：
 
-<!-- 添加 demo.gif 后取消注释：
-![功能演示](./docs/assets/demo.gif)
--->
+**https://\<你的用户名\>.github.io/\<仓库名\>/**
+
+（将 `grid-webgl-openlayers` 换成你的实际仓库名）
+
+[![Live Demo](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://github.com/YOUR_USERNAME/grid-webgl-openlayers/deployments/github-pages)
+
+部署说明见 [docs/github-pages.md](docs/github-pages.md)。
 
 ## 特性
 
@@ -48,8 +51,8 @@ npm install vue   # 仅 Vue 项目需要
 ```
 
 ```ts
-import "ol/ol.css"
-import "grid-webgl-openlayers/style.css"   // 使用图例面板时建议引入
+import 'ol/ol.css';
+import 'grid-webgl-openlayers/style.css'; // 使用图例面板时建议引入
 ```
 
 ## 快速开始
@@ -57,58 +60,56 @@ import "grid-webgl-openlayers/style.css"   // 使用图例面板时建议引入
 ### 命令式
 
 ```ts
-import Map from "ol/Map"
-import View from "ol/View"
-import { GridMapView } from "grid-webgl-openlayers"
+import Map from 'ol/Map';
+import View from 'ol/View';
+import { GridMapView } from 'grid-webgl-openlayers';
 
 const map = new Map({
-  target: "map",
-  view: new View({ projection: "EPSG:4326", center: [105, 30], zoom: 6 }),
-  layers: [/* 你的底图 */],
-})
+  target: 'map',
+  view: new View({ projection: 'EPSG:4326', center: [105, 30], zoom: 6 }),
+  layers: [
+    /* 你的底图 */
+  ],
+});
 
 const overlay = await GridMapView.create({
   map,
-  dataUrl: "/data/arrayData.json",
-})
+  dataUrl: '/data/arrayData.json',
+});
 
 overlay.onPointerMove(({ value }) => {
-  if (value != null) console.log(value)
-})
+  if (value != null) console.log(value);
+});
 ```
 
 ### Vue 3
 
 ```vue
-<GredGridMap
-  v-if="map"
-  :map="map"
-  data-url="/data/arrayData.json"
-  @pointermove="onHover"
-/>
+<GredGridMap v-if="map" :map="map" data-url="/data/arrayData.json" @pointermove="onHover" />
 ```
 
 ```ts
-import { GredGridMap, GredLegendPanel } from "grid-webgl-openlayers/vue"
+import { GredGridMap, GredLegendPanel } from 'grid-webgl-openlayers/vue';
 ```
 
 ## 📖 文档
 
 完整操作手册见 **[docs/](./docs/README.md)**：
 
-| 文档 | 说明 |
-|------|------|
-| [快速上手](docs/getting-started.md) | 使用前提、安装、功能一览 |
-| [数据格式](docs/data-format.md) | `arrayData.json` 结构 |
-| [命令式 API](docs/api-grid-map.md) | `GridMapView` 参数与方法 |
-| [Vue 组件](docs/vue-components.md) | `GredGridMap` / `GredLegendPanel` |
-| [图例与图层控制](docs/legend-and-controls.md) | 图例面板、双滑块、开关按钮 |
-| [鼠标拾取](docs/pointer-pick.md) | 悬停返回值 |
-| [投影切换](docs/projection.md) | EPSG:4326 ↔ 3857 |
-| [色带配置](docs/color-ramp.md) | 不规则色带 |
-| [示例合集](docs/examples.md) | 完整 Demo 代码 |
-| [平台支持](docs/platform.md) | 浏览器 / 移动端 / Flutter |
-| [构建发布](docs/build.md) | npm 打包与类型导出 |
+| 文档                                          | 说明                              |
+| --------------------------------------------- | --------------------------------- |
+| [快速上手](docs/getting-started.md)           | 使用前提、安装、功能一览          |
+| [数据格式](docs/data-format.md)               | `arrayData.json` 结构             |
+| [命令式 API](docs/api-grid-map.md)            | `GridMapView` 参数与方法          |
+| [Vue 组件](docs/vue-components.md)            | `GredGridMap` / `GredLegendPanel` |
+| [图例与图层控制](docs/legend-and-controls.md) | 图例面板、双滑块、开关按钮        |
+| [鼠标拾取](docs/pointer-pick.md)              | 悬停返回值                        |
+| [投影切换](docs/projection.md)                | EPSG:4326 ↔ 3857                  |
+| [色带配置](docs/color-ramp.md)                | 不规则色带                        |
+| [示例合集](docs/examples.md)                  | 完整 Demo 代码                    |
+| [平台支持](docs/platform.md)                  | 浏览器 / 移动端 / Flutter         |
+| [构建发布](docs/build.md)                     | npm 打包与类型导出                |
+| [GitHub Pages 部署](docs/github-pages.md)     | 在线 Demo 自动发布                |
 
 ## 本地预览
 

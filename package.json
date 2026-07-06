@@ -22,11 +22,13 @@
   },
   "sideEffects": false,
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run prepare:demo-data && vite",
     "build": "npm run build:lib",
     "build:lib": "vite build --mode lib",
-    "build:demo": "vite build --outDir dist-demo",
-    "preview": "vite preview"
+    "prepare:demo-data": "node scripts/prepare-demo-data.mjs",
+    "prebuild:demo": "npm run prepare:demo-data",
+    "build:demo": "vite build --mode demo",
+    "preview:demo": "vite preview --outDir dist-demo"
   },
   "peerDependencies": {
     "ol": "^9.0.0 || ^10.0.0",
