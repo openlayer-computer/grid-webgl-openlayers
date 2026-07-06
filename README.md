@@ -6,14 +6,6 @@
 ![peer ol](https://img.shields.io/badge/peer-ol%20%5E9%20%7C%20%5E10-blue)
 ![vue optional](https://img.shields.io/badge/vue-%5E3.3%20(optional)-4FC08D)
 
-## 演示
-
-> 将功能录屏 GIF 放到 [`docs/assets/demo.gif`](./docs/assets/demo.gif) 后，取消下方注释即可在首页显示动图。  
-> 录制说明见 [docs/assets/README.md](./docs/assets/README.md)。
-
-<!-- 添加 demo.gif 后取消注释：
-![功能演示](./docs/assets/demo.gif)
--->
 
 ## 特性
 
