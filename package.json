@@ -1,6 +1,6 @@
 {
   "name": "grid-webgl-openlayers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenLayers + WebGL grid choropleth and value labels for array grid JSON data",
   "type": "module",
   "files": [
