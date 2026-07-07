@@ -15,7 +15,7 @@
 
 **[openlayer-computer/grid-webgl-openlayers](https://github.com/openlayer-computer/grid-webgl-openlayers)**
 
-##npm地址##
+##npm地址
 
 **[grid-webgl-openlayers](https://www.npmjs.com/package/grid-webgl-openlayers)**
 
