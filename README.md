@@ -15,6 +15,10 @@
 
 **[openlayer-computer/grid-webgl-openlayers](https://github.com/openlayer-computer/grid-webgl-openlayers)**
 
+##npm地址##
+
+**[grid-webgl-openlayers](https://www.npmjs.com/package/grid-webgl-openlayers)**
+
 ## 特性
 
 - **外部 Map 叠加** — 底图、投影、控件由业务方管理
