@@ -19,6 +19,9 @@
 
 **[grid-webgl-openlayers](https://www.npmjs.com/package/grid-webgl-openlayers)**
 
+![Uploading image.png…]()
+
+
 ## 特性
 
 - **外部 Map 叠加** — 底图、投影、控件由业务方管理
